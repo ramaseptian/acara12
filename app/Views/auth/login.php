@@ -63,7 +63,7 @@
             <i class="bi bi-mortarboard-fill"></i>
         </div>
         <h4 class="text-center fw-bold mb-1">Politeknik Negeri Jember</h4>
-        <p class="text-center text-muted mb-4" style="font-size:0.9rem;">Sistem Informasi Akademik</p>
+        <p class="text-center text-muted mb-4" style="font-size:0.9rem;">Login Sistem Akademik</p>
 
         <?php if (!empty($flash)) : ?>
             <div class="alert alert-success py-2 mb-3" data-flash style="font-size:0.88rem;">
