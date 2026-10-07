@@ -101,6 +101,8 @@
                 <i class="bi bi-box-arrow-in-right me-1"></i> Login
             </button>
         </form>
+
+        <p class="login-hint">&copy; 2026 PSDKU Teknik Informatika Nganjuk &middot; Politeknik Negeri Jember</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
