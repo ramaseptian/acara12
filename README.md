@@ -64,3 +64,17 @@ Relasi, dan CRUD Lengkap).
   MahasiswaController sama sekali tidak menulis SQL.
 - Acara 10 ini tidak mengubah perilaku aplikasi - seluruhnya diverifikasi
   ulang (tampil, tambah, ubah, hapus) dan tetap berjalan normal.
+
+## Acara 12 — Branch, Merge, Pull Request, dan Conflict
+Project ini dikelola dengan Git (repository GitHub: `si-akademik`).
+- `main` : branch utama (kode stabil).
+- `fitur-login` : fitur Halaman Login (tombol lihat/sembunyikan password,
+  validasi input kosong, username tetap terisi saat login gagal). Sudah
+  di-merge ke `main` dengan `git merge fitur-login`.
+- `fitur-judul-login` : dipakai untuk simulasi merge conflict (mengubah baris
+  subjudul login yang sama dengan `main`). Conflict diselesaikan secara manual
+  lalu di-commit dengan pesan "Menyelesaikan merge conflict".
+- `fitur-footer-login` : branch fitur yang BELUM di-merge, dipakai untuk
+  membuat Pull Request ke `main` di GitHub.
+
+Riwayat lengkap: `git log --oneline --graph --all`
