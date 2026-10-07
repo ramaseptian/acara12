@@ -25,4 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Fitur login (BKPM Acara 12): tombol lihat/sembunyikan password.
+    var toggleBtn = document.getElementById('togglePassword');
+    var passwordInput = document.getElementById('password');
+    var toggleIcon = document.getElementById('togglePasswordIcon');
+    if (toggleBtn && passwordInput) {
+        toggleBtn.addEventListener('click', function () {
+            var tampil = passwordInput.type === 'password';
+            passwordInput.type = tampil ? 'text' : 'password';
+            toggleIcon.className = tampil ? 'bi bi-eye-slash' : 'bi bi-eye';
+        });
+    }
 });

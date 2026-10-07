@@ -91,13 +91,17 @@
                 <label class="form-label small text-muted">Password</label>
                 <div class="input-group">
                     <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
-                    <input type="password" name="password" class="form-control border-start-0" required>
+                    <input type="password" name="password" id="password" class="form-control border-start-0" required>
+                    <button type="button" class="btn btn-outline-secondary" id="togglePassword" aria-label="Tampilkan password">
+                        <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                    </button>
                 </div>
             </div>
             <button type="submit" class="btn btn-login btn-primary w-100 text-white">
                 <i class="bi bi-box-arrow-in-right me-1"></i> Login
             </button>
         </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('assets/js/app.js') ?>"></script>
