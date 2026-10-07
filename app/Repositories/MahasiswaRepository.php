@@ -103,7 +103,6 @@ class MahasiswaRepository
         $mhs = new Mahasiswa(
             $row['nim'],
             $row['nama'],
-            $row['email'],
             (int) $row['prodi_id'],
             (int) $row['angkatan'],
             $row['status']

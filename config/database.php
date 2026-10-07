@@ -5,7 +5,7 @@
 // Acara 7-8 saat aplikasi terhubung ke MySQL menggunakan PDO.
 return [
     'host'     => 'localhost',
-    'dbname'   => 'si_akademik',
+    'dbname'   => 'acara_7',
     'username' => 'root',
     'password' => '',
     'charset'  => 'utf8mb4',
