@@ -84,7 +84,7 @@
                 <label class="form-label small text-muted">Username</label>
                 <div class="input-group">
                     <span class="input-group-text bg-light border-end-0"><i class="bi bi-person"></i></span>
-                    <input type="text" name="username" class="form-control border-start-0" required autofocus>
+                    <input type="text" name="username" class="form-control border-start-0" value="<?= htmlspecialchars($oldUsername ?? '') ?>" required autofocus>
                 </div>
             </div>
             <div class="mb-4">

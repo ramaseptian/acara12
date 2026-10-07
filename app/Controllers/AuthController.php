@@ -12,16 +12,27 @@ class AuthController extends Controller
         $error = $_SESSION['login_error'] ?? null;
         unset($_SESSION['login_error']);
 
+        // Username terakhir yang diketik (supaya tidak perlu mengetik ulang)
+        $oldUsername = $_SESSION['login_old_username'] ?? '';
+        unset($_SESSION['login_old_username']);
+
         $flash = flash_get();
 
-        $this->view('auth/login', compact('error', 'flash'));
+        $this->view('auth/login', compact('error', 'flash', 'oldUsername'));
     }
 
     // Memproses submit form login (BKPM: method login)
     public function login(): void
     {
-        $username = $_POST['username'] ?? '';
+        $username = trim($_POST['username'] ?? '');
         $password = $_POST['password'] ?? '';
+
+        // Validasi input kosong sebelum memeriksa kredensial
+        if ($username === '' || $password === '') {
+            $_SESSION['login_error']        = 'Username dan password wajib diisi.';
+            $_SESSION['login_old_username'] = $username;
+            $this->redirect('login');
+        }
 
         // Simulasi login sukses dengan hardcode username/password
         if ($username === 'admin' && $password === '12345') {
@@ -34,7 +45,8 @@ class AuthController extends Controller
             $this->redirect('dashboard');
         }
 
-        $_SESSION['login_error'] = 'Username atau password salah.';
+        $_SESSION['login_error']        = 'Username atau password salah.';
+        $_SESSION['login_old_username'] = $username;
         $this->redirect('login');
     }
 
